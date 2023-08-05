@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+
+    <!-- Html Tag  -->
+
+    <!-- 1. Anwser To The question--(1)  -->
+    <h1> Anwser To The question----(1)</h1>
+    <button id="myButton">Click For Change contant!</button> </br> </br>
+    <div id="myDiv">You Click in Up Button .Content will change here.</div>
+        
+    
+
+    <!-- 2. Anwser To The question--(4) -->
+    <h1> Anwser To The question----(2)</h1>
+    <button id="incrementButton">Click Here For increment Numbar</button>
+    <h4>Increment count: <span id="count"> 0</span></h4>
+
+
+    <!-- 3. Anwser To The question--(3) -->
+    <h1> Anwser To The question----(3)</h1>
+    <img width="400px" height="400px" id="imageElement" src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg" alt="Image 1"> </br>
+    <button id="button1">Switch to Image 1</button>
+    <button id="button2">Switch to Image 2</button>
+    
+
+
+
+    <script>
+        // 1.Anwser To The question--(1)
+
+        // Get the button and div elements by their IDs
+        const myButton = document.getElementById('myButton');
+        const myDiv = document.getElementById('myDiv');
+
+        // Add a click event listener to the button
+        myButton.addEventListener('click', function () {
+            // myDiv.innerHTML = "New message or image here!";
+            myDiv.innerHTML = '<img src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg" alt="Your Image">';
+        });
+      
+
+
+
+        // 2.Anwser To The question--(2)
+
+        // JavaScript code to handle the button click event and increment the count
+        let count = 0;
+        const countParagraph = document.getElementById('count');
+        const incrementButton = document.getElementById('incrementButton');
+
+        incrementButton.addEventListener('click', () => {
+            count++;
+            countParagraph.innerText = count;
+        });
+
+       
+
+      
+        // 3.Anwser To The question--(3) 
+
+        // Get references to the image element and buttons
+        const imageElement = document.getElementById('imageElement');
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+
+        // Add click event listeners to the buttons
+        button1.addEventListener('click', () => {
+            imageElement.src = "https://tinypng.com/images/social/website.jpg";
+        });
+
+        button2.addEventListener('click', () => {
+            imageElement.src = "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"; 
+        });
+
+  
+        
+
+        // 4. Anwser To The question--(4)
+         async function AsyncGetMathood (){
+            let res = await fetch ("https://jsonplaceholder.typicode.com/posts")
+            let JsonData = await res.json();
+            let JsonDataStringify = JSON.stringify(JsonData); 
+
+            document.write(JsonDataStringify)
+            console.log(JsonDataStringify)
+        }
+        // show the result in Display Call The Function here 
+        // AsyncGetMathood()
+
+        
+    </script>
+</body>
+</html>
